@@ -1,0 +1,97 @@
+@bg:#5C5C5C;
+@white:#fafafa;
+@con:#22A89E;
+@discon:#F44C40;
+
+body{
+  background: darken(@white, 10%);
+}
+img.emoji {
+    height: 1em;
+    width: 1em;
+    margin: 0 .05em 0 .1em;
+    vertical-align: -0.1em;
+}
+.chat-box{
+  font-family: "Lato",helvetica,arial,sans-serif;
+  background-color: @white;
+  border-top: 5px solid @con;
+  position: fixed;
+  bottom: 0;
+  right: 50px;
+  width: 300px;
+  .message,.name-input{
+    width: 100%;
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-size: 14px;
+    font-weight: 300;
+    padding: 10px;
+    box-sizing: border-box;
+
+    &:focus{
+      outline: none;
+    }
+  }
+  .message{
+    resize: none;
+  }
+  .name-input{
+  }
+  .messages{
+    font-weight: 300;
+    border-top: 1px solid lighten(grey,30%);
+    border-bottom: 1px solid lighten(grey,30%);
+    height: 250px;
+    overflow: scroll;
+    padding: 5px;
+    .name{
+      color:@con;
+      font-weight: 300;
+    }
+    .msg{
+      color: darken(#555, 10%);;
+      background-color: lighten(@con, 50%);;
+      display: block;
+      margin: 2px;
+      border-radius: 5px;
+      padding: 5px;
+    }
+  }
+
+  .status{
+    color: @con;
+    font-size: 12px;
+    padding: 5px;
+  }
+  i{
+    float: right;
+    margin-right: 5px;
+    font-size: 16px;
+    color: lighten(#555, 30%);;
+  }
+  .emoji-list{
+    position: absolute;
+    top: 38px;
+    width: 300px;
+    height: 260px;
+    background-color: white;
+    padding: 10px;
+    overflow-y: scroll;
+    box-sizing: border-box;
+    display: none;
+    ul{
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      li{
+        display: inline-block;
+        cursor: pointer;
+      }
+    }
+
+  }
+
+}
